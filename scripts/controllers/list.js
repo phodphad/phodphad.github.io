@@ -36,9 +36,7 @@ tooglesApp.controller('ListCtrl', ['$scope', '$routeParams', '$location', 'youtu
 
   $scope.categories = [
     {key: "Education", title: "Education"},
-    {key: "Howto", title: "How To & Style"},
-    {key: "Tech", title: "Science & Technology"},
-  ]
+]
 
   $scope.search = function() {
     youtube.setPage($scope.page);
@@ -69,8 +67,8 @@ tooglesApp.controller('ListCtrl', ['$scope', '$routeParams', '$location', 'youtu
       youtube.getItem('users', $routeParams.username);
 
     } else {
-      document.title = "Toogles | Awesome goggles for YouTube";
-      youtube.getVideos('browse', '');
+      document.title = "Phodphad! - The best place to learn online";
+      youtube.getVideos('browse/Education', '');
     }
   }
 
