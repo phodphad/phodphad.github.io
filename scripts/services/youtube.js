@@ -30,7 +30,7 @@ tooglesApp.service('youtube', ['$http', function($http) {
   }
 
   this.getItem = function(type, id) {
-    var url = 'https://gdata.youtube.com/feeds/api/' + type + '/' + id + '?category=Education&safeSearch=none&v=2&alt=json&callback=' + callback;
+    var url = 'https://gdata.youtube.com/feeds/api/' + type + '/' + id + '?safeSearch=none&v=2&alt=json&callback=' + callback;
     $http.jsonp(url);
   }
 
@@ -38,27 +38,27 @@ tooglesApp.service('youtube', ['$http', function($http) {
     query = encodeURIComponent(query);
     if (type === 'related') {
       // All videos by a user
-      var url = urlBase + 'videos/' + query + '/related?category=Education&v=2&alt=json&callback=' + callback;
+      var url = urlBase + 'videos/' + query + '/related?v=2&alt=json&callback=' + callback;
 
     } else if (type === 'user') {
       // All videos by a user
-      var url = urlBase + 'users/' + query + '/uploads?category=Education&start-index=' + offset + '&max-results=' + count + '&v=2&alt=json&callback=' + callback;
+      var url = urlBase + 'users/' + query + '/uploads?start-index=' + offset + '&max-results=' + count + '&v=2&alt=json&callback=' + callback;
 
     } else if (type === 'user_favorites') {
       // All videos by a user
-      var url = urlBase + 'users/' + query + '/favorites?category=Education&start-index=' + offset + '&max-results=' + count + '&v=2&alt=json&callback=' + callback;
+      var url = urlBase + 'users/' + query + '/favorites?start-index=' + offset + '&max-results=' + count + '&v=2&alt=json&callback=' + callback;
 
     } else if (type === 'user_subscriptions') {
       // All videos by a user
-      var url = urlBase + 'users/' + query + '/newsubscriptionvideos?category=Education&start-index=' + offset + '&max-results=' + count + '&v=2&alt=json&callback=' + callback;
+      var url = urlBase + 'users/' + query + '/newsubscriptionvideos?start-index=' + offset + '&max-results=' + count + '&v=2&alt=json&callback=' + callback;
 
     } else if (type === 'user_playlists') {
       // All videos by a user
-      var url = urlBase + 'users/' + query + '/playlists?category=Education&start-index=' + offset + '&max-results=' + count + '&v=2&alt=json&callback=' + callback;
+      var url = urlBase + 'users/' + query + '/playlists?start-index=' + offset + '&max-results=' + count + '&v=2&alt=json&callback=' + callback;
 
     } else if (type === 'category') {
       // All videos within a category
-      var url = urlBase + "standardfeeds/most_viewed_" + query + "?category=Education&time=today&start-index=" + offset + "&max-results=" + count + "&safeSearch=none&v=2&alt=json&callback=" + callback;
+      var url = urlBase + "standardfeeds/most_viewed_" + query + "?time=today&start-index=" + offset + "&max-results=" + count + "&safeSearch=none&v=2&alt=json&callback=" + callback;
 
     } else if (type === 'search') {
       // A search query for videos
@@ -66,7 +66,7 @@ tooglesApp.service('youtube', ['$http', function($http) {
       if (searchType == 'playlists') {
         path = 'playlists/snippets';
       }
-      var url = urlBase + path + "?q=" + query + "&start-index=" + offset + "&max-results=" + count + "category=Education&&safeSearch=none&v=2&alt=json&callback=" + callback;
+      var url = urlBase + path + "?q=" + query + "&start-index=" + offset + "&max-results=" + count + "&safeSearch=none&v=2&alt=json&callback=" + callback;
       if (time) {
         url += '&time=' + time;
       }
@@ -78,7 +78,7 @@ tooglesApp.service('youtube', ['$http', function($http) {
       }
     } else {
       // Most popular recent videos
-      var url = urlBase + "standardfeeds/most_viewed?time=today&start-index=" + offset + "&max-results=" + count + "&category=Education&safeSearch=none&v=2&alt=json&callback=" + callback;
+      var url = urlBase + "standardfeeds/most_viewed?time=today&category=Education&start-index=" + offset + "&max-results=" + count + "&safeSearch=none&v=2&alt=json&callback=" + callback;
     }
     $http.jsonp(url);
   }
