@@ -30,7 +30,7 @@ tooglesApp.service('youtube', ['$http', function($http) {
   }
 
   this.getItem = function(type, id) {
-    var url = 'https://gdata.youtube.com/feeds/api/' + type + '/' + id + '?safeSearch=none&v=2&alt=json&callback=' + callback;
+    var url = 'https://gdata.youtube.com/feeds/api/' + type + '/' + id + '?safeSearch=none&category=Education&v=2&alt=json&callback=' + callback;
     $http.jsonp(url);
   }
 
