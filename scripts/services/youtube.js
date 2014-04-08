@@ -78,7 +78,7 @@ tooglesApp.service('youtube', ['$http', function($http) {
       }
     } else {
       // Most popular recent videos
-      var url = urlBase + "standardfeeds/most_viewed?time=today&category=Education&start-index=" + offset + "&max-results=" + count + "&safeSearch=none&v=2&alt=json&callback=" + callback;
+      var url = urlBase + "standardfeeds/most_viewed?time=today&start-index=" + offset + "&max-results=" + count + "&safeSearch=none&v=2&alt=json&callback=" + callback;
     }
     $http.jsonp(url);
   }
