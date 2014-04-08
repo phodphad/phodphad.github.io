@@ -1,6 +1,6 @@
 tooglesApp.service('youtube', ['$http', function($http) {
 
-  var urlBase = "https://gdata.youtube.com/feeds/api/";
+  var urlBase = "https://gdata.youtube.com/feeds/api/videos?category=Education";
 
   var offset = 1;
   var count = 24;
