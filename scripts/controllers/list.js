@@ -35,8 +35,20 @@ tooglesApp.controller('ListCtrl', ['$scope', '$routeParams', '$location', 'youtu
   }
 
   $scope.categories = [
+    {key: "Autos", title: "Autos & Vehicles"},
+    {key: "Comedy", title: "Comedy"},
     {key: "Education", title: "Education"},
-]
+    {key: "Entertainment", title: "Entertainment"},
+    {key: "Film", title: "Film & Animation"},
+    {key: "Howto", title: "How To & Style"},
+    {key: "Music", title: "Music"},
+    {key: "News", title: "News & Politics"},
+    {key: "People", title: "People & Blogs"},
+    {key: "Animals", title: "Pets & Animals"},
+    {key: "Tech", title: "Science & Technology"},
+    {key: "Sports", title: "Sports"},
+    {key: "Travel", title: "Travel & Events"},
+  ]
 
   $scope.search = function() {
     youtube.setPage($scope.page);
@@ -67,8 +79,8 @@ tooglesApp.controller('ListCtrl', ['$scope', '$routeParams', '$location', 'youtu
       youtube.getItem('users', $routeParams.username);
 
     } else {
-      document.title = "Phodphad! - The best place to learn online";
-      youtube.getVideos('browse/Education', '');
+      document.title = "Toogles | Awesome goggles for YouTube";
+      youtube.getVideos('browse', '');
     }
   }
 

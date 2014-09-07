@@ -38,7 +38,7 @@ tooglesApp.service('youtube', ['$http', function($http) {
     query = encodeURIComponent(query);
     if (type === 'related') {
       // All videos by a user
-      var url = urlBase + 'videos/' + query + '/related?v=2&alt=json&callback=' + callback;
+      var url = urlBase + 'videos/' + query + '/related?&v=2&alt=json&callback=' + callback;
 
     } else if (type === 'user') {
       // All videos by a user
