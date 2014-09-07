@@ -22,7 +22,7 @@ tooglesApp.controller('ViewCtrl', ['$scope', '$routeParams', '$location', 'youtu
       $scope.videos = data.feed.entry;
     }
     onYouTubeIframeAPIReady($scope.video.video_id, $scope.section);
-    document.title = $scope.video.title.$t + " | Toogles";
+    document.title = $scope.video.title.$t + " | Phodphad";
   }
 
   window.relatedCallback = function(data) {
