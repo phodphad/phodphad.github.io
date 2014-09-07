@@ -55,13 +55,13 @@ tooglesApp.controller('ListCtrl', ['$scope', '$routeParams', '$location', 'youtu
     youtube.setCallback('searchCallback');
     if ($routeParams.query !== undefined && $routeParams.query !== "" && $routeParams.query !== "0") {
       // This is a search with a specific query.
-      document.title = $routeParams.query + " | Toogles";
+      document.title = $routeParams.query + " | Phodphad";
       $scope.query = $routeParams.query;
       youtube.getVideos('search', $scope.query);
 
     } else if ($routeParams.category !== undefined) {
       // This is a category page.
-      document.title = $routeParams.category + " | Toogles";;
+      document.title = $routeParams.category + " | Phodphad";;
       youtube.getVideos('category', $routeParams.category);
 
     } else if ($routeParams.username !== undefined) {
@@ -73,13 +73,13 @@ tooglesApp.controller('ListCtrl', ['$scope', '$routeParams', '$location', 'youtu
           $scope.resulttype = 'playlists'
         }
       }
-      document.title = $routeParams.username + " | Toogles";;
+      document.title = $routeParams.username + " | Phodphad";;
       youtube.getVideos(type, $routeParams.username);
       youtube.setCallback('userCallback');
       youtube.getItem('users', $routeParams.username);
 
     } else {
-      document.title = "Toogles | Awesome goggles for YouTube";
+      document.title = "Phodphad! - The best place to learn online.";
       youtube.getVideos('category', "Education");
     }
   }
