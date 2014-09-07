@@ -80,7 +80,7 @@ tooglesApp.controller('ListCtrl', ['$scope', '$routeParams', '$location', 'youtu
 
     } else {
       document.title = "Toogles | Awesome goggles for YouTube";
-      youtube.getVideos('browse', '');
+      youtube.getVideos('category', "Education");
     }
   }
 
