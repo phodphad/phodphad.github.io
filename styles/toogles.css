@@ -187,3 +187,21 @@ h1, h2, h3, h4, h5, h6 {
 .tabs.vertical li ul li,.tabs.vertical li ul li.active {
   border:none;
 }
+
+#home{
+  display: table;
+  position: fixed;
+  height: 100%;
+  width: 100%;}
+
+#homeSearch{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+#innerSearch{
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+}

@@ -1,5 +1,6 @@
 <div class="three columns">
   <div class="fixed">
+    <a title="Go home" class="hide-for-small back-menu" href="#/"><i class="icon-home"></i></a>
     <form class="search-form" ng-submit="location.path('/search/' + query)">
       <input ng-model="query" type="text" placeholder="Laws of Motion">
       <button class="button expand">Search To Learn</button>
@@ -10,4 +11,3 @@
 <div when-scrolled="loadMore()" class="nine columns">
   <div ng-include src="'views/' + resulttype + '.html'"></div>
 </div>
-
