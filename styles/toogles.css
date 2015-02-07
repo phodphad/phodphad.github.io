@@ -188,11 +188,6 @@ h1, h2, h3, h4, h5, h6 {
   border:none;
 }
 
-#home{
-  display: table;
-  position: fixed;
-  height: 100%;
-  width: 100%;}
 
 #homeSearch{
   display: table-cell;
@@ -204,6 +199,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: auto;
   margin-right: auto;
   width: 300px;
+  margin-top: 10%;
 }
 
 #homeSearch p{
