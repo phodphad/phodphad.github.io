@@ -16,7 +16,8 @@ tooglesApp.controller('ListCtrl', ['$scope', '$routeParams', '$location', 'youtu
       $scope.videos.push.apply($scope.videos, data.feed.entry);
     }
   }
-
+  $scope.videos.shift();
+  
   window.userCallback = function(data) {
     $scope.user = data.entry;
   }
