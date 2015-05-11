@@ -1,8 +1,17 @@
-<ul class="hide-for-small vertical tabs">
+<div class="show-for-medium-up nav-section">
+    <h4>Trending</h4>
+    <ul class="side-nav">
+        <li ng-class="{active: location.path() == '/browse'}"><a ng-href="#/browse">Everything</a></li>
+        <li ng-class="{active: location.path().indexOf(category.key) > -1}" ng-repeat="category in categories | orderBy: 'snippet.title' | filter: {snippet: {assignable: true}}"><a ng-href='#/browse/{{category.id}}'>{{category.snippet.title}}</a></li>
+    </ul>
+</div>
 
-<p><strong>Learn Anything at Anytime from Anyplace.</strong></p>
-
-<p>We don’t need to tell you how screwed our current education system is. Everybody knows how screwed it is. There is no dearth of talent in us, still we are deprived of the high quality education we deserve. We are forced to choose our field of education ; not on the basis of our interests but on the basis of our financial conditions and social trends. We are bounded by our branch, curriculum, place, time; by the entire system. Phodphad! aims to solve these acute problems. Phodphad! aims to bring a radical shift in the current education system from standardized colleges to personalised learning : thus, creating conditions where people’s natural talent can flourish. </p>
-
-<strong>Phodphad! comes from the world “phodu” which means a genius. Phodphad! will make you the Phodu! Are you ready to be the Phodu?</strong>
-</ul>
+<div class="show-for-medium-up nav-section">
+    <h4>Toogles Links</h4>
+    <ul class="side-nav">
+        <li><a href="https://chrome.google.com/webstore/detail/toogles/kljfdbkcacjeogbiiiikahgkmmlgdekf">Chrome Extension</a></li>
+        <li><a href="http://marklets.com/View+YouTube+video+on+Toogles.aspx">Bookmarklet</a></li>
+        <li><a href="http://github.com/mikecrittenden/toogles">Code on GitHub</a></li>
+        <li><a href="http://twitter.com/mcrittenden">Twitter (@mcrittenden)</a></li>
+    </ul>
+</div>
