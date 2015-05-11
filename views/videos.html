@@ -1,5 +1,5 @@
 <div ng-repeat="video in videos" class="large-4 medium-6 columns">
-  <a ng-href="{{getLink(video)}}" class="toogles-video">
+  <a ng-href="{{getLink(video)}}" class="phodphad-video">
     <h3><span>{{video.snippet.title}}</span></h3>
     <img ng-src="{{video.snippet.thumbnails.high.url}}" />
     <div class="duration">{{formatDuration(video.contentDetails.duration)}}</div>
