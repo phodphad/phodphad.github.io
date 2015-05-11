@@ -17,7 +17,6 @@
       <dd ng-class="{active: showRelated}"><a href="" ng-click="fetchRelated()">{{videoTab}}</a></dd>
     </dl>
     <div class="meta" ng-show="!showRelated">
-<<<<<<< HEAD
       <h3><a title="View on YouTube" href="http://youtube.com/watch?v={{video.id}}&toogles=0">{{video.snippet.title}}</a></h3>
       <div class="rating">
         <div class="like" style="width: {{averageRating(video.statistics.likeCount, video.statistics.dislikeCount)}}%;"></div>
@@ -26,16 +25,6 @@
         <li><i class="fa fa-user"></i>&nbsp;&nbsp;<a href="#/user/{{video.snippet.channelId}}">{{video.snippet.channelTitle}}</a></li>
         <li><i class="fa fa-eye"></i>&nbsp;&nbsp;{{video.statistics.viewCount | number:0}} views</li>
         <li><i class="fa fa-calendar"></i>&nbsp;&nbsp;{{video.snippet.publishedAt | date}}</li>
-=======
-    <h3><a title="View on YouTube" href="http://youtube.com/watch?v={{video.id}}&toogles=0">{{video.snippet.title}}</a></h3>
-      <div class="rating">
-      <div class="like" style="width: {{averageRating(video.statistics.likeCount, video.statistics.dislikeCount)}}%;"></div>
-      </div>
-      <ul>
-      <li><i class="fa fa-user"></i>&nbsp;&nbsp;<a href="#/user/{{video.snippet.channelId}}">{{video.snippet.channelTitle}}</a></li>
-      <li><i class="fa fa-eye"></i>&nbsp;&nbsp;{{video.statistics.viewCount | number:0}} views</li>
-      <li><i class="fa fa-calendar"></i>&nbsp;&nbsp;{{video.snippet.publishedAt | date}}</li>
->>>>>>> f117e5b30713b78b56111f6b145fab4e2a6572b4
       </ul>
       <p class="hide-for-small description" ng-bind-html="video.snippet.description | htmlify"></p>
     </div>
@@ -45,7 +34,6 @@
   </div>
   <div class="columns" ng-class="{'large-9 medium-8': showSidebar, 'medium-12': !showSidebar}">
     <div class="expanded-info" ng-click="showSidebar = true" ng-show="!showSidebar">
-<<<<<<< HEAD
       <a class="icon" title="Go home" href="#/"><i class="fa fa-home"></i></a>
       <a class="icon" title="Toggle sidebar" ng-click="showSidebar = false"><i class="fa fa-expand"></i></a>
       <h3><a title="View on YouTube" href="http://youtube.com/watch?v={{video.id}}&toogles=0">{{video.snippet.title}}</a></h3>
@@ -56,18 +44,6 @@
       <div class="restricted">
           <div ng-show="video.restricted">
               <h3>Embedding is disabled for this video, so Toogles
-=======
-      <a class="icon" title="Go home" href="#/"><i class="icon-home"></i></a>
-      <a class="icon" title="Toggle sidebar" ng-click="showSidebar = false"><i class="icon-fullscreen"></i></a>
-      <h3><a title="View on YouTube" href="http://youtube.com/watch?v={{video.id}}&toogles=0">{{video.snippet.title}}</a></h3>
-    </div>
-    <div ng-show="!video.restricted && !video.deleted" class="flex-video widescreen">
-      <iframe id="player" ng-show="video" src="{{video.embedurl}}" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="restricted">
-          <div ng-show="video.restricted">
-              <h3>Embedding is disabled for this video, so Phodphad!
->>>>>>> f117e5b30713b78b56111f6b145fab4e2a6572b4
                   can't play it. ☹<br /><br /><a title="View on YouTube" href="http://youtube.com/watch?v={{video.video_id}}&toogles=0">Watch it on YouTube &raquo;</a></h3>
               <img src="http://i.imgur.com/nlmzGJ7.gif" />
           </div>
@@ -81,17 +57,9 @@
 
 <div ng-show="!video" class="video-broken">
     <div class="video-broken-inner">
-<<<<<<< HEAD
         <h1>Aw, poop.<br /><br />
             YouTube doesn't have this video anymore.<br /><br />
             <a href="/#/browse">&#9825; Toogles</a>
         </h1>
     </div>
 </div>
-=======
-        <h1>YouTube doesn't have this video anymore.<br /><br />
-            <a href="/#/browse">&#9825; Phodphad!</a>
-        </h1>
-    </div>
-</div>
->>>>>>> f117e5b30713b78b56111f6b145fab4e2a6572b4
