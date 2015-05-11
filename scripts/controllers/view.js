@@ -1,7 +1,7 @@
 /**
  * The controller used when viewing an individual video.
  */
-phodphadApp.controller('ViewCtrl', ['$scope', '$routeParams', '$location', 'youtube', function($scope, $routeParams, $location, youtube) {
+tooglesApp.controller('ViewCtrl', ['$scope', '$routeParams', '$location', 'youtube', function($scope, $routeParams, $location, youtube) {
 
   $scope.location = $location; // Access $location inside the view.
   $scope.showSidebar = true;
@@ -9,19 +9,19 @@ phodphadApp.controller('ViewCtrl', ['$scope', '$routeParams', '$location', 'yout
   $scope.section = $location.path().split('/')[1];
   $scope.videoTab = $scope.section === 'view' ? 'Related' : 'Playlist';
 
-  if (localStorage.phodphadDarkMode === "true") {
+  if (localStorage.tooglesDarkMode === "true") {
     $scope.$parent.darkmode = true;
   }
   $scope.$watch('darkmode', function (newVal, oldVal, scope) {
     if (typeof newVal !== "undefined" && newVal !== "undefined") {
-      localStorage.phodphadDarkMode = newVal;
+      localStorage.tooglesDarkMode = newVal;
     }
   });
 
   youtube.fetchVideos($routeParams.id, function(response) {
     $scope.video = response.items[0];
     onYouTubeIframeAPIReady($scope.video.id, $scope.section);
-    document.title = $scope.video.title + " | Phodphad";
+    document.title = $scope.video.title + " | Toogles";
   });
 
   $scope.formatDuration = function(seconds) {

@@ -1,4 +1,4 @@
-phodphadApp.service('youtube', ['$http', function($http) {
+tooglesApp.service('youtube', ['$http', function($http) {
 
   var urlBase = 'https://www.googleapis.com/youtube/v3/';
   var apiKey = 'AIzaSyAZDgDzsLyU1E1D2Ic76Eol2NbuBp8SKyg';

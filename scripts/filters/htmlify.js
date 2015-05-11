@@ -1,4 +1,4 @@
-phodphadApp.filter('htmlify', function() {
+tooglesApp.filter('htmlify', function() {
   return function(input) {
     if (!input) {
       return "";

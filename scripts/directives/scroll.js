@@ -1,4 +1,4 @@
-phodphadApp.directive('whenScrolled', function() {
+tooglesApp.directive('whenScrolled', function() {
   return function(scope, elm, attr) {
     var raw = elm[0];
 
