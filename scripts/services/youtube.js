@@ -1,7 +1,11 @@
 tooglesApp.service('youtube', ['$http', function($http) {
 
   var urlBase = 'https://www.googleapis.com/youtube/v3/';
+<<<<<<< HEAD
   var apiKey = 'AIzaSyAZDgDzsLyU1E1D2Ic76Eol2NbuBp8SKyg';
+=======
+  var apiKey = 'AIzaSyCVQSqmrWJyIZ_HztHTET35Skwc-OfXFiI';
+>>>>>>> f117e5b30713b78b56111f6b145fab4e2a6572b4
   var count = 24;
 
   this.searchVideos = function(query, params, callback) {
