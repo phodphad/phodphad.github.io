@@ -17,7 +17,7 @@
       <dd ng-class="{active: showRelated}"><a href="" ng-click="fetchRelated()">{{videoTab}}</a></dd>
     </dl>
     <div class="meta" ng-show="!showRelated">
-      <h3><a title="View on YouTube" href="http://youtube.com/watch?v={{video.id}}&toogles=0">{{video.snippet.title}}</a></h3>
+      <h3><a title="View on YouTube" href="http://youtube.com/watch?v={{video.id}}&phodphad=0">{{video.snippet.title}}</a></h3>
       <div class="rating">
         <div class="like" style="width: {{averageRating(video.statistics.likeCount, video.statistics.dislikeCount)}}%;"></div>
       </div>
@@ -36,15 +36,15 @@
     <div class="expanded-info" ng-click="showSidebar = true" ng-show="!showSidebar">
       <a class="icon" title="Go home" href="#/"><i class="fa fa-home"></i></a>
       <a class="icon" title="Toggle sidebar" ng-click="showSidebar = false"><i class="fa fa-expand"></i></a>
-      <h3><a title="View on YouTube" href="http://youtube.com/watch?v={{video.id}}&toogles=0">{{video.snippet.title}}</a></h3>
+      <h3><a title="View on YouTube" href="http://youtube.com/watch?v={{video.id}}&phodphad=0">{{video.snippet.title}}</a></h3>
     </div>
     <div ng-show="!video.restricted && !video.deleted" class="flex-video widescreen">
       <div id="player"></div>
     </div>
       <div class="restricted">
           <div ng-show="video.restricted">
-              <h3>Embedding is disabled for this video, so Toogles
-                  can't play it. ☹<br /><br /><a title="View on YouTube" href="http://youtube.com/watch?v={{video.video_id}}&toogles=0">Watch it on YouTube &raquo;</a></h3>
+              <h3>Embedding is disabled for this video, so Phodphad
+                  can't play it. ☹<br /><br /><a title="View on YouTube" href="http://youtube.com/watch?v={{video.video_id}}&phodphad=0">Watch it on YouTube &raquo;</a></h3>
               <img src="http://i.imgur.com/nlmzGJ7.gif" />
           </div>
           <div ng-show="video.deleted">
@@ -59,7 +59,7 @@
     <div class="video-broken-inner">
         <h1>Aw, poop.<br /><br />
             YouTube doesn't have this video anymore.<br /><br />
-            <a href="/#/browse">&#9825; Toogles</a>
+            <a href="/#/browse">&#9825; Phodphad</a>
         </h1>
     </div>
 </div>

@@ -1,7 +1,7 @@
 /**
  * The controller used when searching/browsing videos.
  */
-tooglesApp.controller('ListCtrl', ['$scope', '$routeParams', '$location', 'youtube', function($scope, $routeParams, $location, youtube) {
+phodphadApp.controller('ListCtrl', ['$scope', '$routeParams', '$location', 'youtube', function($scope, $routeParams, $location, youtube) {
   $scope.location = $location;
   $scope.searchsort = $location.search()['searchsort'] || false;
   $scope.searchduration = $location.search()['searchduration'] || false;
@@ -10,12 +10,12 @@ tooglesApp.controller('ListCtrl', ['$scope', '$routeParams', '$location', 'youtu
   $scope.section = $location.path().split('/')[1];
   $scope.searchtype = $location.search()['searchtype'] || 'videos';
 
-  if (localStorage.tooglesDarkMode === "true") {
+  if (localStorage.phodphadDarkMode === "true") {
     $scope.$parent.darkmode = true;
   }
   $scope.$watch('darkmode', function (newVal, oldVal, scope) {
     if (typeof newVal !== "undefined" && newVal !== "undefined") {
-      localStorage.tooglesDarkMode = newVal;
+      localStorage.phodphadDarkMode = newVal;
     }
   });
 

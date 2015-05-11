@@ -2,11 +2,11 @@
 
 /**
  * @ngdoc overview
- * @name tooglesApp
+ * @name phodphadApp
  *
  * Main module of the application.
  */
-var tooglesApp = angular.module('tooglesApp', ['ngAnimate', 'ngAria', 'ngCookies', 'ngMessages', 'ngResource', 'ngRoute', 'ngSanitize', 'ngTouch'])
+var phodphadApp = angular.module('phodphadApp', ['ngAnimate', 'ngAria', 'ngCookies', 'ngMessages', 'ngResource', 'ngRoute', 'ngSanitize', 'ngTouch'])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/browse', { templateUrl: 'views/list.html', controller: 'ListCtrl' });
     $routeProvider.when('/browse/:category', { templateUrl: 'views/list.html', controller: 'ListCtrl' });
